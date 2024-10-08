@@ -4,7 +4,7 @@ services:
     build: ./php
     image: teddyandria/cp-php
     ports:  
-      - "8081:80"
+      - "${HTTP_PORT}:80"
     #volumes:
     #  - ./php/src:/var/www/html #permet de monter l'env src dans mon container pour un env de dev
     environment:
