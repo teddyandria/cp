@@ -1,5 +1,6 @@
 services:
   front:
+    platform: linux/amd64
     build: ./php
     image: teddyandria/cp-php
     ports:  
@@ -16,6 +17,7 @@ services:
       - db # pour que ce container front fonctionne, il faut que db soit démarré. Db sera d'abord lancé ensuite il lancera front
   
   db:
+    platform: linux/amd64
     build: ./mysql
     image: teddyandria/cp-mysql:latest
     #ports: # pas nécessaire si on est en dev car on utilise le port 8080 du container front
